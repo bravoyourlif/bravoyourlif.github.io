@@ -1,21 +1,21 @@
 #about
-	@include tile
-	
+	@include tile2
+
 	.wrapper
 		@include wrapper
-		
+
 		.camera
-			width: 45%
-	
+			width: 40%
+
 			img
-				width: 85%
-				
+				width: 100%
+
 		.blurb
-			width: 55%
-		
+			width: 60%
+
 			h2
 				@include heading
-				
+
 				&:before
 					content: ""
 					position: relative
@@ -25,20 +25,23 @@
 					height: 1px
 					margin-right: 30px
 					background-color: $black
-					
-			p		
+
+			p
 				max-width: 600px
 				margin-bottom: 45px
-			
+
+			a
+				color: $black
+
 			.social
 				display: flex
 				width: 180px
 				justify-content: space-between
-				
+
 				a
 					color: $white
 					text-decoration: none
-				
+
 				i
 					display: block
 					width: 30px
@@ -48,26 +51,25 @@
 					line-height: 30px
 					background-color: #909090
 					transition: background-color .2s ease-in-out
-					
+
 					&:hover
 						background-color: #020202
-						
+
 		@media (max-width: 1023px)
 			.camera
 				display: none
-					
+
 			.blurb
 				display: flex
 				width: 100%
 				flex-direction: column
 				align-items: flex-end
 				text-align: right
-				
+
 				h2:before
 					display: none
-					
+
 		@media (max-width: 640px)
 			.blurb
 				align-items: center
 				text-align: center
-				
