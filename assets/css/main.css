@@ -634,8 +634,12 @@ svg path{
 #about .wrapper .blurb .show {
     display: block;
 }
-#about .wrapper .blurb h1 {
+#about .wrapper .blurb h3 {
     color: green;
+}
+
+#about .wrapper .blurb .hashtag {
+    color: hotpink;
 }
 
 #about .wrapper .blurb .teaching {
