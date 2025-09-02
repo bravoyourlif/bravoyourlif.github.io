@@ -35,134 +35,184 @@
   <body>
     <section id="hero">
       <header>
-        <div class="nav-toggle">
+        <div class="nav-toggle" aria-label="Toggle navigation menu">
           <p>Menu</p><span></span>
         </div>
-        <ul class="nav">
-          <li><a href="#about">Research</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#publication">Publication</a></li>
-          <li><a href="#position">Position</a></li>
-        </ul>
+        <nav>
+          <ul class="nav">
+            <li><a href="#about">Research</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#publication">Publication</a></li>
+            <li><a href="#position">Position</a></li>
+          </ul>
+        </nav>
       </header>
+
       <div class="wrapper">
         <div class="welcome">
-          <h1><strong>Chaeyeon Han</strong> Ph.D. Student</h1>
-          <p><b> Chaeyeon Han</b> is a doctoral student at Georgia Tech School of City and Regional Planning. She is a graduate research assistant
-            at the Center for Spatial Planning Analysis and Visualization (CSPAV) at Georgia Tech.
-            She has earned a Master's degree in Urban Planning (2022) at University of Illinois at Urbana-Champaign.
-          Also, she holds a B.S.E. in Computer Science and Engineering (2020) from Yonsei University, South Korea.</p>
+          <h1>Hey, I'm <strong>Chaeyeon Han</strong></h1>
 
-          <p><b> Research Interest: </b> Geo AI, Geo Data Science, Urban Analytics, Big Data, Data Visualization, CyberGIS,
-            Disaster Resilience, Climate Migration, Digital Cartography, and Urban Studies.
-            VR/AR (Virtual Reality/Augmented Reality) applications</p>
-          <p><b> Curriculum Vitae </b><a href= "https://docs.google.com/document/d/17cZeRbXXP2ShTd9BcMzp2SUNFMwPVJk7/edit?usp=sharing&ouid=107423642072919293199&rtpof=true&sd=true"> Download</a></p>
-          chan303@gatech.edu
+          <p><strong>Chaeyeon ("Che-Yon") Han</strong> is a doctoral student at the Georgia Tech School of City and Regional Planning. She is a graduate research assistant at the Center for Urban Resilience and Analytics.
+          She earned a Master’s degree in Urban Planning (2022) from the University of Illinois at Urbana-Champaign, and a B.S.E. in Computer Science and Engineering (2020) from Yonsei University, South Korea.</p>
+
+          <p><strong>Research Interests:</strong> Urban/Geo AI, Urban Data Science, Urban Analytics, Data Visualization, CyberGIS, Human Mobility Analytics, Disaster Resilience, Climate Displacement and Migration, and VR/AR (Virtual Reality/Augmented Reality) applications.</p>
+
+          <p><strong>Curriculum Vitae:</strong>
+            <a href="https://docs.google.com/document/d/17cZeRbXXP2ShTd9BcMzp2SUNFMwPVJk7/edit?usp=sharing&ouid=107423642072919293199&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+              Download
+            </a></br>
+            🎓 <a href="https://scholar.google.com/citations?user=_4W_x-MAAAAJ&hl=ko">Google Scholar</a></br>
+            ✉️ chan303@gatech.edu</p>
         </div>
-        <div class="photographer"><img src="assets/img/profile.png" alt="profile"></div>
+
+        <div class="photographer">
+          <img class="profile-img" src="assets/img/chaeyeon_scholar_profile.jpg" alt="Profile photo of Chaeyeon Han" style="transform: scale(0.8); transform-origin: center;">
+        </div>
+
+
       </div>
     </section>
 
     <section id="about">
-      <div class="wrapper">
+      <h2><strong>Research Projects</strong></h2>
+      <div id="tag-filter" class="tag-filter-bar"></div>
+
+      <div id="project-tags" class="tags">
+        <button class="tag active" data-filter="all">All</button>
+        <button class="tag" data-filter="urban">Urban</button>
+        <button class="tag" data-filter="Human Mobility">Human Mobility</button>
+        <button class="tag" data-filter="resilience">Resilience</button>
+        <!-- Add more tags as needed -->
+      </div>
+
+      <div class="project-container">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/milton.png" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>🌊 Destination Choices during Hurricane Milton</h3>
+            <p>Investigated mobility patterns and destination choice mechanisms during hurricane</p>
+            <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5341936">Paper under view (preprint)</a></p>
+            <div class="tags">
+              <span>Climate Displacement</span>
+              <span>MobileGPS</span>
+              <span>Social Ties</span>
+              <span>SafeGraph</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/ped_tracking.png" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>🚶‍♂️ Pedestrian Flow Prediction Using Audio and Video</h3>
+            <p>Experimenting the usefulness of audio and video-based pedestrian detection data on predicting future pedestrian flows.</p>
+            <p><a href="https://link.springer.com/article/10.1007/s44212-024-00053-9">Publication</a></p>
+            <div class="tags">
+              <span>Urban Sensing</span>
+              <span>Pedestrian Detection</span>
+              <span>Pedestrian Flow Prediction</span>
+              <span>Computer Vision</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/residential_energy.jpg" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>💡 Teleworking and Residential Energy Use</h3>
+            <p>Empirical assessment of the relationship between teleworking frequency and residential energy use in the U.S., using multilevel modeling and time use comparisons</p>
+            <p><a href="https://iopscience.iop.org/article/10.1088/2634-4505/ade3fa#erisade3fas4">Publication</a></p>
+            <div class="tags">
+              <span>Teleworking</span>
+              <span>Sustainability</span>
+              <span>Multilevel Modeling</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/gpt_eval.png" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>📄 Plan Evaluation using ChatGPT</h3>
+            <p>Publication under review</p>
+            <div class="tags">
+              <span>LLM</span>
+              <span>Plan Evaluation</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/aesthetic_poi.jpg" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>🍝 Aesthetic Places, Streetscapes, and Place Satisfaction</h3>
+            <p>Assessed of indoor aesthetics and streetscape safety using computer vision models. Finds if streetscapes still matter in car-dependent neighborhoods.</p>
+            <p><a href="https://www.tandfonline.com/doi/full/10.1080/13574809.2025.2541953">Publication</a></p>
+            <div class="tags">
+              <span>Computer Vision</span>
+              <span>Streetscapes</span>
+              <span>Urban Design</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/thanksgiving.jpg" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>🍁 Can Thanksgiving Destinations Predict Climate Migration Patterns?</h3>
+            <p>Compared post-hurricane relocation destination choices and thanksgiving holiday travel patterns in the US, using anonymized mobile GPS data.</p>
+            <p><a href="https://findingspress.org/article/117432-can-thanksgiving-destinations-predict-climate-migration-patterns">Publication</a>
+            <div class="tags">
+              <span>Social Ties</span>
+              <span>Climate Displacement</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/mentalhealth.jpg" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>🏡 Mental Health and Built Environment</h3>
+            <p>Mediation Analysis showing relationship betwteen walkability and mental health outcomes,</p>
+            <p><a href="https://www.sciencedirect.com/science/article/pii/S221414052500057X">Publication</a>
+            <div class="tags">
+              <span class="project-tag" data-tag="Built Environment">Built Environment</span>
+              <span class="project-tag" data-tag="Mental Health">Mental Health</span>
+              <span class="project-tag" data-tag="COVID-19">COVID-19</span>
+              <span class="tag" data-filter="Human Mobility">Human Mobility</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/cybergis_viz.png" alt="Project Image">
+          </div>
+          <div class="project-content">
+            <h3>😷 A CyberGIS-enabled Pandemic Warning System Using Social Media Data</h3>
+            <p>Urban sensing of pedestrians through integrated, cost-effective, and scalable audio sensor networks.</p>
+            <p><a href="https://urbanaudiosensing.github.io/">Project Website</a> <a href="https://link.springer.com/article/10.1007/s44212-024-00053-9">Publication</a></p>
+            <div class="tags">
+              <span class="project-tag" data-tag="COVID-19">COVID-19</span>
+              <span class="project-tag" data-tag="CyberGIS">CyberGIS</span>
+              <span class="project-tag" data-tag="Social Media">Social Media</span>
+              <span class="project-tag" data-tag="Human Mobility">Human Mobility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
         <div class="blurb">
-          <h2><strong>Research Projects</strong></h2>
-            <b>2022-2023</b>
-            <ul>
-                <li>Exploring the <button id="myButton">Geography of Social Ties <i class="material-icons" style="vertical-align: middle;">add_circle</i></button> in the U.S. based onThanksgiving Destination (on-going) </li>
-                <li><a href="https://urbanaudiosensing.github.io/">Website</a> Urban Sensing of Pedestrians through Integrated, Cost-effective, and Scalable Audio Sensor Networks (on-going)</li>
-                <li>Mental Health Facility Visits Before and After the Outbreak of Covid-19: <button id="mentalhealth_button">The Role of Walkable Built Environment <i class="material-icons" style="vertical-align: middle;">add_circle</i></button> (on-going)</li>
-                <li>A Bibliometric Literature Review on <button id="ml_button">Artificial Intelligence in Urban Studies <i class="material-icons" style="vertical-align: middle;">add_circle</i></button> (on-going)</li>
-            </ul>
-            <b>2021-2022</b>
-            <ul>
-                <li>A CyberGIS-enabled Pandemic Warning System Using Social Media Data</li>
-                <li><a href="https://github.com/cybergis/CyberGIS-Viz ">CyberGIS-VIZ, 2021 </a></li>
-                <li>Development and Validation of Regional Models of HIV Vulnerabilities and Solutions, 2021</li>
-            </ul>
-            <b>2020</b>
-            <ul>
-                <li>Analysis of the Subway Ridership Change in Seoul after the Outbreak of COVID-19</li>
-                <li>A Comparative Analysis of Trends of Disaster Risk Research using Topic Modeling & Network Analysis <a href="https://scholar.kyobobook.co.kr/article/detail/4010028561094">Published in Korean Society of Hazard Mitigation (KOSHAM)</a></li>
-            </ul>
-
-          <div id="thanksgiving" class="popup">
-              <div class="popup-content">
-                  <h3><b>Exploring the Geography of Social Ties in the U.S. based onThanksgiving Destination</b><br></h3>
-                  <b>Chaeyeon Han</b>, Uijeong Hwang, Subhrajit Guhathakurta
-                  <div class="hashtag">#human_geography, #social_ties, #human_mobility, #social_network, #family_ties</div> <br>
-                  This project aimed to visually identify the geography of the familial and social ties in the United States. To accomplish this, we have conducted an in-depth analysis of travel patterns during four years of Thanksgiving holidays, a time when the majority of individuals visit their families. The study assumes that trips made around Thanksgiving Day are predominantly made to visit people with kin relationships (e.g., family, close friends). This study employs SafeGraph data, which includes the weekly foot traffic of individuals with their anonymized smartphone data. The data also provides 1) visitors’ residential location at the Census Block Group level and 2) information on destination POIs, including locations. Based on the O-D patterns in the four years of Thanksgiving weeks that we collected (2018-2021), we used repetitive visits as a proxy of kin networks among family or close friends. Then, we visualized and examined the geographic distribution of social/family ties in the U.S.
-                  <br>
-
-                  <div class="popup_img"><img src="assets/img/map1.png" alt="profile"></div>
-                  <br>
-                  </p>
-                  <button id="thanksgiving_closePopup">Close</button>
-              </div>
-          </div>
-
-          <div id="mentalhealth" class="popup">
-              <div class="popup-content">
-                  <h3><b>Mental Health Facility Visits Before and After the Outbreak of Covid-19: The Role of Walkable Built Environment</b></h3><br>
-                  <b>Chaeyeon Han</b>, Uijeong Hwang, Bon Woo Koo, Subhrajit Guhathakurta</br>
-                  <div class="hashtag">#Built-Environment, #Mental-Health, #COVID-19, #Walkability, #Walk-Score, #SafeGraph</div><br>
-                  <p>This study examined the evolving impact of neighborhood walkability on mental health outcomes across three different stages of the COVID-19 pandemic. Utilizing Walk Score data to quantify neighborhood walkability and analyzing mental health facility visit frequencies using SafeGraph data alongside COVID-19 case rates, this study provides a thorough analysis of the mediating role of the pandemic in the dynamic between walkability and mental health. We found a consistent negative association between Walk Score and frequency of mental health facility visits, suggesting that neighborhoods characterized by better accessibility to Point-Of-Interests (POIs) tend to have better mental health outcomes. Furthermore, mediation analysis shows that walkability not only directly enhances mental health but also indirectly contributes to improved outcomes by correlating with lower COVID-19 cases. The study underscores the enduring value of walkable urban designs in enhancing mental well-being and reducing the spread of COVID-19, advocating for urban planning and policies that prioritize walkability.
-                  </p>
-                  <div class="popup_img"><img src="assets/img/mentalhealth.png" alt="profile"></div>
-                  <button id="mentalhealth_closePopup">Close</button>
-              </div>
-          </div>
-
-          <div id="ml" class="popup">
-              <div class="popup-content">
-                  <h3><b>A Bibliometric Literature Review on Artificial Intelligence, Machine Learning, and Deep Learning in Urban Studies</b></h3><br>
-                  <b>Chaeyeon Han</b>, Uijeong Hwang, Bon Woo Koo, Subhrajit Guhathakurta</br>
-                  <div class="hashtag">#Topic Modeling, #Urban Studies, #Artificial Intelligence, #Machine Learning, #Deep Learning, #Urban Planning</div><br>
-                  With the increasing prevalence of AI in urban studies, there is a growing demand to examine and leverage its wide-ranging applications. This study utilizes a bibliometric analysis, employing LDA topic modeling and a systematic literature review, to identify nine major research topics within urban studies and explore how AI is utilized in each area. Through this systematic review, some potential pathways for applying AI in urban studies research are discussed and concerns regarding the applicability of AI in urban research are highlighted. Finally, the study proposes the adoption of Causal/Explainable AI as potential solutions to mitigate the concerns.
-                  </p>
-                  <button id="ml_closePopup">Close</button>
-              </div>
-          </div>
-
-          <script>
-              myButton.addEventListener("click", function () {
-                  thanksgiving.classList.add("show");
-              });
-              thanksgiving_closePopup.addEventListener("click", function () {
-                  thanksgiving.classList.remove("show");
-              });
-              window.addEventListener("click", function (event) {
-                  if (event.target == thanksgiving) {
-                      thanksgiving.classList.remove("show");
-                  }
-              });
-
-              mentalhealth_button.addEventListener("click", function () {
-                  mentalhealth.classList.add("show");
-              });
-              mentalhealth_closePopup.addEventListener("click", function () {
-                  mentalhealth.classList.remove("show");
-              });
-              window.addEventListener("click", function (event) {
-                  if (event.target == thanksgiving) {
-                      mentalhealth.classList.remove("show");
-                  }
-              });
-
-              ml_button.addEventListener("click", function () {
-                  ml.classList.add("show");
-              });
-              ml_closePopup.addEventListener("click", function () {
-                  ml.classList.remove("show");
-              });
-              window.addEventListener("click", function (event) {
-                  if (event.target == thanksgiving) {
-                      ml.classList.remove("show");
-                  }
-              });
-          </script>
-
-
           <p class = "teaching">
             <br>
             <h2 id = "teaching"><strong>Teaching</strong></h2>
@@ -185,31 +235,8 @@
               <li><b>Winter & Spring 20</b> Teaching Assistant: YCS1001 Computational Thinking and SW Programming</li>
             </ul>
           </p>
-
-          <p>
-            <br>
-            <h2 id = "publication"><strong>Publication</strong></h2>
-            <b>Published Paper</b>
-            <ol>
-              <li>A Comparative Analysis of Trends of Disaster Risk Research using Topic Modeling & Network Analysis <a href="https://scholar.kyobobook.co.kr/article/detail/4010028561094">Published in Korean Society of Hazard Mitigation (KOSHAM)</a></li>
-            </ol>
-            <b>Under review</b>
-            <ol>
-              <li>Seshadri, P., <b>Han, C.</b>, Koo, B., Posner, N., Guhathakurta, S., & Lerch, A. (2024). ASPED: An Audio Dataset for Detecting Pedestrians. <a href="https://arxiv.org/abs/2309.06531">Access through arXiv</a></li>
-              <li>Han, C., Hwang, U., Koo, B., Guhathakurta, S. (2024). A Bibliometric Literature Review on Artificial Intelligence, Machine Learning, and Deep Learning in Urban Studies</li>
-            </ol>
-          </p>
-
-          <p>
-            <br>
-            <h2 id = "position"><strong>Position</strong></h2>
-            <ul>
-              <li><b>Aug. 2022 - present</b> Doctoral Research Assistant, Center for Spatial Planning Analysis and Visualization, Georgia Tech</li>
-              <li><b>Oct. 2021 - May. 2022</b> Graduate Research Assistant, CyberGIS Center, University of Illinois at Urbana-Champaign</li>
-            </ul>
-          </p>
         </div><br><br>
-        <p class="copyright">&copy; Chaeyeon Han 2023</p>
+        <p class="copyright">&copy; Chaeyeon Han 2023-2025</p>
       </div>
     </section>
 
@@ -217,5 +244,66 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
     <script src="assets/js/functions-min.js"></script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tagsSet = new Set();
+    const projectCards = document.querySelectorAll('.project-card');
+    const tagBar = document.getElementById('tag-filter');
+
+    // Gather all tags from projects
+    document.querySelectorAll('.project-tag').forEach(tagEl => {
+      tagsSet.add(tagEl.dataset.tag);
+    });
+
+    // Create filter buttons
+    [...tagsSet].sort().forEach(tag => {
+      const btn = document.createElement('button');
+      btn.textContent = tag;
+      btn.setAttribute('data-tag', tag);
+      tagBar.appendChild(btn);
+    });
+
+    // Add click event to each button
+    tagBar.addEventListener('click', e => {
+      if (e.target.tagName !== 'BUTTON') return;
+
+      const selectedTag = e.target.getAttribute('data-tag');
+
+      // Toggle active class
+      tagBar.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+      e.target.classList.add('active');
+
+      // Show/hide cards based on tag
+      projectCards.forEach(card => {
+        const tags = [...card.querySelectorAll('.project-tag')].map(t => t.dataset.tag);
+        card.style.display = tags.includes(selectedTag) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+<script>
+  const tags = document.querySelectorAll(".tag");
+  const cards = document.querySelectorAll(".project-card");
+
+  tags.forEach(tag => {
+    tag.addEventListener("click", () => {
+      const filter = tag.getAttribute("data-filter");
+
+      tags.forEach(t => t.classList.remove("active"));
+      tag.classList.add("active");
+
+      cards.forEach(card => {
+        if (filter === "all" || card.classList.contains(filter)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+
   </body>
 </html>
