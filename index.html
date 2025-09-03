@@ -42,8 +42,6 @@
           <ul class="nav">
             <li><a href="#about">Research</a></li>
             <li><a href="#teaching">Teaching</a></li>
-            <li><a href="#publication">Publication</a></li>
-            <li><a href="#position">Position</a></li>
           </ul>
         </nav>
       </header>
@@ -75,18 +73,20 @@
 
     <section id="about">
       <h2><strong>Research Projects</strong></h2>
-      <div id="tag-filter" class="tag-filter-bar"></div>
+      <!--<div id="tag-filter" class="tag-filter-bar"></div>-->
 
-      <div id="project-tags" class="tags">
-        <button class="tag active" data-filter="all">All</button>
-        <button class="tag" data-filter="urban">Urban</button>
-        <button class="tag" data-filter="Human Mobility">Human Mobility</button>
-        <button class="tag" data-filter="resilience">Resilience</button>
-        <!-- Add more tags as needed -->
+      <div class="filter-buttons">
+        <!--<button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Climate-Displacement">Climate Displacement</button>
+        <button class="filter-btn" data-filter="Human-Mobility">Human Mobility</button>
+        <button class="filter-btn" data-filter="Social-Ties">Social Ties</button>
+        <button class="filter-btn" data-filter="Mobile-GPS">Mobile GPS</button>
+        Add more tags as needed -->
       </div>
 
+
       <div class="project-container">
-        <div class="project-card">
+        <div class="project-card" data-tags="Climate-Displacement Mobile-GPS Social-Ties">
           <div class="project-image">
             <img src="assets/img/milton.png" alt="Project Image">
           </div>
@@ -95,14 +95,13 @@
             <p>Investigated mobility patterns and destination choice mechanisms during hurricane</p>
             <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5341936">Paper under view (preprint)</a></p>
             <div class="tags">
-              <span>Climate Displacement</span>
-              <span>MobileGPS</span>
-              <span>Social Ties</span>
-              <span>SafeGraph</span>
+              <span class="project-tag" data-tag="Climate-Displacement">Climate Displacement</span>
+              <span class="project-tag" data-tag="Mobile-GPS">Mobile GPS</span>
+              <span class="project-tag" data-tag="Social-Ties">Social Ties</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-tags="Urban-Sensing Computer-Vision">
           <div class="project-image">
             <img src="assets/img/ped_tracking.png" alt="Project Image">
           </div>
@@ -111,14 +110,12 @@
             <p>Experimenting the usefulness of audio and video-based pedestrian detection data on predicting future pedestrian flows.</p>
             <p><a href="https://link.springer.com/article/10.1007/s44212-024-00053-9">Publication</a></p>
             <div class="tags">
-              <span>Urban Sensing</span>
-              <span>Pedestrian Detection</span>
-              <span>Pedestrian Flow Prediction</span>
-              <span>Computer Vision</span>
+              <span class="project-tag" data-tag="Urban-Sensing">Urban Sensing</span>
+              <span class="project-tag" data-tag="Computer-Vision">Computer Vision</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-tags="Teleworking Sustainability">
           <div class="project-image">
             <img src="assets/img/residential_energy.jpg" alt="Project Image">
           </div>
@@ -127,13 +124,12 @@
             <p>Empirical assessment of the relationship between teleworking frequency and residential energy use in the U.S., using multilevel modeling and time use comparisons</p>
             <p><a href="https://iopscience.iop.org/article/10.1088/2634-4505/ade3fa#erisade3fas4">Publication</a></p>
             <div class="tags">
-              <span>Teleworking</span>
-              <span>Sustainability</span>
-              <span>Multilevel Modeling</span>
+              <span class="project-tag" data-tag="Teleworking">Teleworking</span>
+              <span class="project-tag" data-tag="Sustainability">Sustainability</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-tags="LLM Plan-Evaluation">
           <div class="project-image">
             <img src="assets/img/gpt_eval.png" alt="Project Image">
           </div>
@@ -141,12 +137,12 @@
             <h3>📄 Plan Evaluation using ChatGPT</h3>
             <p>Publication under review</p>
             <div class="tags">
-              <span>LLM</span>
-              <span>Plan Evaluation</span>
+              <span class="project-tag" data-tag="LLM">LLM</span>
+              <span class="project-tag" data-tag="Plan-Evaluation">Plan Evaluation</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-tags="Computer-Vision Urban-Design">
           <div class="project-image">
             <img src="assets/img/aesthetic_poi.jpg" alt="Project Image">
           </div>
@@ -155,13 +151,12 @@
             <p>Assessed of indoor aesthetics and streetscape safety using computer vision models. Finds if streetscapes still matter in car-dependent neighborhoods.</p>
             <p><a href="https://www.tandfonline.com/doi/full/10.1080/13574809.2025.2541953">Publication</a></p>
             <div class="tags">
-              <span>Computer Vision</span>
-              <span>Streetscapes</span>
-              <span>Urban Design</span>
+              <span class="project-tag" data-tag="Computer-Vision">Computer Vision</span>
+              <span class="project-tag" data-tag="Urban-Design">Urban Design</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-tags="Social-Ties Climate-Displacement Human-Mobility">
           <div class="project-image">
             <img src="assets/img/thanksgiving.jpg" alt="Project Image">
           </div>
@@ -170,13 +165,14 @@
             <p>Compared post-hurricane relocation destination choices and thanksgiving holiday travel patterns in the US, using anonymized mobile GPS data.</p>
             <p><a href="https://findingspress.org/article/117432-can-thanksgiving-destinations-predict-climate-migration-patterns">Publication</a>
             <div class="tags">
-              <span>Social Ties</span>
-              <span>Climate Displacement</span>
+              <span class="project-tag" data-tag="Social-Ties">Social Ties</span>
+              <span class="project-tag" data-tag="Climate-Displacement">Climate Displacement</span>
+              <span class="project-tag" data-tag="Human-Mobility">Human Mobility</span>
             </div>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-tags="COVID-19 Built-Environment Mental-Health Human-Mobility">
           <div class="project-image">
             <img src="assets/img/mentalhealth.jpg" alt="Project Image">
           </div>
@@ -185,27 +181,27 @@
             <p>Mediation Analysis showing relationship betwteen walkability and mental health outcomes,</p>
             <p><a href="https://www.sciencedirect.com/science/article/pii/S221414052500057X">Publication</a>
             <div class="tags">
-              <span class="project-tag" data-tag="Built Environment">Built Environment</span>
-              <span class="project-tag" data-tag="Mental Health">Mental Health</span>
+              <span class="project-tag" data-tag="Built-Environment">Built Environment</span>
+              <span class="project-tag" data-tag="Mental-Health">Mental Health</span>
               <span class="project-tag" data-tag="COVID-19">COVID-19</span>
-              <span class="tag" data-filter="Human Mobility">Human Mobility</span>
+              <span class="project-tag" data-tag="Human-Mobility">Human Mobility</span>
             </div>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-tags="COVID-19 CyberGIS Social-Media Human-Mobility">
           <div class="project-image">
             <img src="assets/img/cybergis_viz.png" alt="Project Image">
           </div>
           <div class="project-content">
             <h3>😷 A CyberGIS-enabled Pandemic Warning System Using Social Media Data</h3>
-            <p>Urban sensing of pedestrians through integrated, cost-effective, and scalable audio sensor networks.</p>
-            <p><a href="https://urbanaudiosensing.github.io/">Project Website</a> <a href="https://link.springer.com/article/10.1007/s44212-024-00053-9">Publication</a></p>
+            <p>Participated in creating a CyberGIS-based geovisualization tool especially useful for showing spatiotemporal dynamics in infectious disease datasets.</p>
+            <p><a href="https://cybergisxhub.cigi.illinois.edu/knowledge-base/components/cybergis-vis/what-is-cybergis-vis/">Project Website</a> <a href="https://dl.acm.org/doi/abs/10.1145/3681777.3698474">Publication</a></p>
             <div class="tags">
               <span class="project-tag" data-tag="COVID-19">COVID-19</span>
               <span class="project-tag" data-tag="CyberGIS">CyberGIS</span>
-              <span class="project-tag" data-tag="Social Media">Social Media</span>
-              <span class="project-tag" data-tag="Human Mobility">Human Mobility</span>
+              <span class="project-tag" data-tag="Social-Media">Social Media</span>
+              <span class="project-tag" data-tag="Human-Mobility">Human Mobility</span>
             </div>
           </div>
         </div>
@@ -246,63 +242,72 @@
     <script src="assets/js/functions-min.js"></script>
 
     <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tagsSet = new Set();
-    const projectCards = document.querySelectorAll('.project-card');
-    const tagBar = document.getElementById('tag-filter');
+    document.addEventListener("DOMContentLoaded", () => {
+      const projectCards = document.querySelectorAll(".project-card");
+      const tagSet = new Set();
+      const filterContainer = document.querySelector(".filter-buttons");
 
-    // Gather all tags from projects
-    document.querySelectorAll('.project-tag').forEach(tagEl => {
-      tagsSet.add(tagEl.dataset.tag);
-    });
-
-    // Create filter buttons
-    [...tagsSet].sort().forEach(tag => {
-      const btn = document.createElement('button');
-      btn.textContent = tag;
-      btn.setAttribute('data-tag', tag);
-      tagBar.appendChild(btn);
-    });
-
-    // Add click event to each button
-    tagBar.addEventListener('click', e => {
-      if (e.target.tagName !== 'BUTTON') return;
-
-      const selectedTag = e.target.getAttribute('data-tag');
-
-      // Toggle active class
-      tagBar.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
-      e.target.classList.add('active');
-
-      // Show/hide cards based on tag
+      // Step 1: Collect all unique tags from project cards
       projectCards.forEach(card => {
-        const tags = [...card.querySelectorAll('.project-tag')].map(t => t.dataset.tag);
-        card.style.display = tags.includes(selectedTag) ? 'block' : 'none';
+        const tags = card.dataset.tags?.split(" ") || [];
+        tags.forEach(tag => tagSet.add(tag));
       });
-    });
-  });
-</script>
-<script>
-  const tags = document.querySelectorAll(".tag");
-  const cards = document.querySelectorAll(".project-card");
 
-  tags.forEach(tag => {
-    tag.addEventListener("click", () => {
-      const filter = tag.getAttribute("data-filter");
+      // Step 2: Generate "All" button
+      const allBtn = document.createElement("button");
+      allBtn.classList.add("filter-btn", "active");
+      allBtn.textContent = "All";
+      allBtn.dataset.filter = "all";
+      filterContainer.appendChild(allBtn);
 
-      tags.forEach(t => t.classList.remove("active"));
-      tag.classList.add("active");
+      // Step 3: Generate tag buttons dynamically
+      [...tagSet].sort().forEach(tag => {
+        const btn = document.createElement("button");
+        btn.classList.add("filter-btn");
+        btn.textContent = tag;
+        btn.dataset.filter = tag;
+        filterContainer.appendChild(btn);
+      });
 
-      cards.forEach(card => {
-        if (filter === "all" || card.classList.contains(filter)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
+      // Step 4: Filtering logic
+      function filterProjects(tag) {
+        projectCards.forEach(card => {
+          const tags = card.dataset.tags.split(" ");
+          const match = tag === "all" || tags.includes(tag);
+          card.style.display = match ? "block" : "none";
+        });
+      }
+
+      // Step 5: Add listener to top buttons
+      filterContainer.addEventListener("click", e => {
+        if (e.target.classList.contains("filter-btn")) {
+          const selected = e.target.dataset.filter;
+
+          // Update button active state
+          filterContainer.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+          e.target.classList.add("active");
+
+          filterProjects(selected);
         }
       });
+
+      // Step 6: Add listener to tags in project cards
+      document.querySelectorAll(".project-tag").forEach(span => {
+        span.style.cursor = "pointer";
+        span.addEventListener("click", () => {
+          const selected = span.dataset.tag;
+
+          // Sync top filter button if it exists
+          const topBtn = filterContainer.querySelector(`[data-filter="${selected}"]`);
+          if (topBtn) {
+            topBtn.click();
+          } else {
+            filterProjects(selected);
+          }
+        });
+      });
     });
-  });
-</script>
+    </script>
 
 
   </body>
