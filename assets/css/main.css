@@ -630,8 +630,8 @@ svg path{
   color: white;
   padding: 4px 8px;
   margin: 2px;
-  border-radius: 15px;
-  font-size: 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
   display: inline-block;
 }
 
@@ -671,7 +671,7 @@ svg path{
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 .tag.active {
@@ -684,7 +684,7 @@ svg path{
   border-radius: 12px;
   padding: 4px 10px;
   margin: 2px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -703,7 +703,7 @@ svg path{
 
 .filter-btn {
   padding: 0.5rem 1rem;
-  font-size: 0.9em;
+  font-size: 0.7em;
   background-color: #222;
   color: #fff;
   border: none;
