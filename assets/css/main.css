@@ -580,6 +580,86 @@ svg path{
   transform: translateY(-5px);
 }
 
+/* Flippable project cards: both faces share one grid cell, so the card
+   takes the height of the taller face and the grid doesn't jump */
+.project-card.flip-card {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  display: grid;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  grid-area: 1 / 1;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: ghostwhite;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.flip-details {
+  padding-left: 1.2em;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.flip-details li {
+  margin-bottom: 6px;
+}
+
+.flip-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.8rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.flip-toggle:hover {
+  text-decoration: underline;
+}
+
+.flip-toggle:focus-visible {
+  outline: 2px solid #f58442;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner {
+    transition: none;
+  }
+  .flip-card.flipped .flip-inner,
+  .flip-back {
+    transform: none;
+  }
+  .flip-back,
+  .flip-card.flipped .flip-front {
+    visibility: hidden;
+  }
+  .flip-card.flipped .flip-back {
+    visibility: visible;
+  }
+}
+
 .project-card img {
   width: 100%;
   border-radius: 12px 12px 0 0;
