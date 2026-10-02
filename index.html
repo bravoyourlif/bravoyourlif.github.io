@@ -555,6 +555,56 @@
     </script>
 
     <script>
+    // Keyword dock: buttons near the pointer spring down and widen
+    document.addEventListener("DOMContentLoaded", () => {
+      const dock = document.querySelector(".filter-buttons");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (!dock || reduceMotion || !canHover) return;
+
+      const PROXIMITY = 122, SPRING = 0.19, DAMPING = 0.70;
+      const WIDTH_GROWTH = 17, HEIGHT_GROWTH = 16, DROP = 3.5;
+      const items = [...dock.querySelectorAll(".filter-btn")].map(el => ({ el, x: 0, v: 0, target: 0 }));
+      let pointer = null, frame = null;
+
+      function targets() {
+        items.forEach(item => {
+          if (item.el === document.activeElement && item.el.matches(":focus-visible")) { item.target = 1; return; }
+          if (!pointer) { item.target = 0; return; }
+          const r = item.el.getBoundingClientRect();
+          const dx = pointer.x - (r.left + r.width / 2);
+          const dy = pointer.y - (r.top + r.height / 2);
+          const t = Math.max(0, 1 - Math.hypot(dx, dy) / PROXIMITY);
+          item.target = 0.5 - 0.5 * Math.cos(Math.PI * t);
+        });
+      }
+
+      function step() {
+        targets();
+        let moving = false;
+        items.forEach(item => {
+          item.v = (item.v + (item.target - item.x) * SPRING) * DAMPING;
+          item.x += item.v;
+          if (Math.abs(item.v) > 0.0005 || Math.abs(item.target - item.x) > 0.0005) moving = true;
+          else item.x = item.target;
+          const s = item.el.style;
+          s.setProperty("--dock-drop", (item.x * DROP).toFixed(2) + "px");
+          s.setProperty("--dock-sx", (1 + item.x * WIDTH_GROWTH / item.el.offsetWidth).toFixed(4));
+          s.setProperty("--dock-sy", (1 + item.x * HEIGHT_GROWTH / item.el.offsetHeight).toFixed(4));
+        });
+        frame = moving ? requestAnimationFrame(step) : null;
+      }
+
+      function kick() { if (!frame) frame = requestAnimationFrame(step); }
+
+      dock.addEventListener("pointermove", e => { pointer = { x: e.clientX, y: e.clientY }; kick(); });
+      dock.addEventListener("pointerleave", () => { pointer = null; kick(); });
+      dock.addEventListener("focusin", kick);
+      dock.addEventListener("focusout", kick);
+    });
+    </script>
+
+    <script>
     // Flippable project cards: click anywhere (except links and tags) to flip
     document.querySelectorAll(".flip-card").forEach(card => {
       const front = card.querySelector(".flip-front");
